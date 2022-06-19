@@ -6,10 +6,11 @@ on:
     paths-ignore:
       - 'DCOS/**'
       - 'K8s/**'   
-  workflow_dispatch:
-    paths-ignore:
-      - 'DCOS/**'
-      - 'K8s/**'
+  # workflow_dispatch:
+  #   paths-ignore:
+  #     - 'DCOS/**'
+  #     - 'K8s/**'
+  pull_request:
 
 env:
   GAR_INFO: us-central1-docker.pkg.dev/coe-srs-2022/coe-srs-gar-repo 
@@ -48,4 +49,4 @@ jobs:
           gcloud info
           docker push "$GAR_INFO"/"$APP_NAME":"$TAG"
           printf %s $TAG > VERSION.txt
-        #gcloud builds submit --tag "$GAR_INFO"/"$APP_NAME":"$TAG" .
+      #gcloud builds submit --tag "$GAR_INFO"/"$APP_NAME":"$TAG" .
