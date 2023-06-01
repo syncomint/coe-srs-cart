@@ -1,0 +1,24 @@
+name: test pve
+on:
+  push:
+  
+jobs:
+  install-pve:
+    name: Install PVE
+    runs-on: ubuntu-latest
+  
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+                
+      - name: Setup PVE
+        run: |
+            python -m venv pve
+            source pve/bin/activate
+            pip install -r requirements.txt
+            pip list
+
+      - name: Run Sample Python script
+        run: |
+            python sample.py
+      
