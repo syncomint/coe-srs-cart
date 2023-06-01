@@ -1,11 +1,11 @@
 name: CI Workflow
 on:
-  push:
-    branches-ignore:
-      - dev-branch-01
-    paths-ignore:
-      - 'DCOS/**'
-      - 'K8s/**'   
+  # push:
+  #   branches-ignore:
+  #     - dev-branch-01
+  #   paths-ignore:
+  #     - 'DCOS/**'
+  #     - 'K8s/**'   
   # workflow_dispatch:
   #   paths-ignore:
   #     - 'DCOS/**'

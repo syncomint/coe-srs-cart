@@ -17,8 +17,5 @@ jobs:
             source pve/bin/activate
             pip install -r requirements.txt
             pip list
-
-      - name: Run Sample Python script
-        run: |
             python sample.py
       
