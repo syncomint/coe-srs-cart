@@ -13,6 +13,7 @@ jobs:
                 
       - name: Setup PVE
         run: |
+            python --version
             python -m venv pve
             source pve/bin/activate
             pip install -r requirements.txt
