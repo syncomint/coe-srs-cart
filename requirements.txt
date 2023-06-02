@@ -1,2 +1,6 @@
 pandas
 numpy
+os
+python-csv
+datetime
+regex
