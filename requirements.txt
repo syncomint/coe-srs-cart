@@ -1,6 +1,5 @@
 setuptools<58.0
 python-csv
 datetime
-demjson3
+demjson2
 regex
-demjson3
