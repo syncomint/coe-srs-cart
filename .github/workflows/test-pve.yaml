@@ -16,7 +16,7 @@ jobs:
             python --version
             python -m venv pve
             source pve/bin/activate
-            pip3 install -r requirements.txt
-            pip3 list
+          #pip3 install -r requirements.txt
+          #  pip3 list
             python sample.py
       
