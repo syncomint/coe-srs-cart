@@ -1,5 +1,3 @@
-setuptools<58.0
 python-csv
 datetime
-demjson
 regex

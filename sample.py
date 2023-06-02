@@ -1,5 +1,8 @@
 import numpy as np
 import pandas as pd
+import os
+import regex as re
+import csv
 
 list2 = [[1,2,3],[4,5,6]]
 array2 = np.array(list2)
