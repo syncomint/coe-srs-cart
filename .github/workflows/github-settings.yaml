@@ -1,0 +1,15 @@
+name: Apply Repo Settings
+
+on:
+  workflow_dispatch:
+
+jobs:
+  update-settings:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Apply Repo Settings
+        uses: mooseburgr/repository-settings-action@v1
+        with:
+          token: ${{ secrets.YOUR_PAT }}
+          # optionally override the default settings file path
+          settings-path: .github/settings.yml

@@ -1,0 +1,46 @@
+# .github/settings.yml
+
+repository:
+  name: coe-srs-cart
+  description: GitHub Action for managing repo settings as code
+  default_branch: main
+  allow_squash_merge: true
+  allow_merge_commit: false
+  allow_rebase_merge: false
+  allow_auto_merge: true
+  delete_branch_on_merge: true
+  allow_update_branch: true
+
+teams:
+  # both "{org}/{team}" and "{team}" formats handled
+  - name: org/team-1
+    permission: push # one of: pull, triage, push, maintain, admin
+  - name: team-2
+    permission: admin
+
+collaborators:
+  - username: mtplewis
+    permission: maintain
+
+branches:
+  - name: main
+    protection: # null to delete this branch's protection rule
+      required_pull_request_reviews: # null to disable
+        required_approving_review_count: 1
+        dismiss_stale_reviews: true
+        require_code_owner_reviews: true
+      required_status_checks:
+        strict: false
+        contexts:
+          - Check dist/
+          - TypeScript Tests
+      enforce_admins: true
+      restrictions: null
+      required_linear_history: true
+
+environments:
+  - name: prod
+    prevent_self_review: true
+    reviewers:
+      - org/team-1
+      - mooseburgr
